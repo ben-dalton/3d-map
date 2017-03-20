@@ -1,0 +1,15 @@
+
+/* Level nav */
+.mallnav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	-webkit-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+}
+
+.mallnav--hidden {
+	pointer-events: none;
+	opacity: 0;
+}

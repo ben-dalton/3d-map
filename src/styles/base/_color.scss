@@ -1,0 +1,20 @@
+// Application Color Profiles
+// Description: Set all application-wide color definitions here
+// To see examples, see the Color Swatches PNG
+
+// Endpoints
+$white: #fff;
+$black: #000;
+
+// Greys
+$light-grey: #f5f5f5;
+$mid-grey: #d7dada; 
+$dark-grey: #353b3b;
+
+// Default Color
+$default: $dark-grey;
+
+// Set Site Specific Base, Highlight and Accent Colors Here for easy switching between themes
+$base: $dark-grey;
+$highlight: #513885;
+$accent: lighten(#513885, 10);
