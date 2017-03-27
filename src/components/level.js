@@ -23,7 +23,7 @@ const Polygon = styled.polygon`
 const Level = ({level}) => {
   return (
     <Div className={`level level--${level.id} animated fadeIn`}>
-      <Svg version="1.1" viewBox="0 0 677.8 411.4" x="0px" y="0px" xmlSpace="preserve">
+      <Svg version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 500" x="0px" y="0px" xmlSpace="preserve">
         <Polygon class="st0" fill={level.color} points={level.points} />
       </Svg>
     </Div>
