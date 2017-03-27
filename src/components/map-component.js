@@ -17,10 +17,12 @@ class MapComponent extends Component {
         <Overview
           selectedZoneId={this.props.selectedZoneId}
           onSelectZone={this.props.onSelectZone} />
-        {this.props.selectedZoneId && this.props.activeLevels.map(l => {
-            return <Level key={l.id} level={l} />
-          }
-        )}
+        <div className="levels">
+          {this.props.selectedZoneId && this.props.activeLevels.map(l => {
+              return <Level key={l.id} level={l} />
+            }
+          )}
+        </div>
       </div>
     );
   }
