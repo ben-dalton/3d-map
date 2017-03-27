@@ -1,10 +1,13 @@
 import { connect } from 'react-redux';
-import { initializeApp } from '../actions/map-actions';
+import { initializeApp, selectZone } from '../actions/map-actions';
 import MapComponent from '../components/map-component';
 
 const mapStateToProps = (state) => {
   return {
-    initialized: state.initialized.toString()
+    initialized: state.initialized,
+    selectedZoneId: state.selectedZoneId,
+    activeLevels: state.activeLevels,
+    zones: state.zones
   };
 }
 
@@ -12,6 +15,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onInit: () => {
       dispatch(initializeApp())
+    },
+    onSelectZone: zoneId => {
+      dispatch(selectZone(zoneId))
     }
   }
 }
