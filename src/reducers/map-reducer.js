@@ -2,6 +2,7 @@ import { zones } from '../data/areas';
 import {
   INIT_APP,
   SELECT_ZONE,
+  RESET_MAP
 } from '../actions/action-types';
 
 const initialState = {
@@ -33,6 +34,13 @@ function mapApp(state = initialState, action) {
         ...state,
         selectedZoneId: action.zoneId,
         activeLevels: getSelectedZoneLevels(action.zoneId)
+      }
+    case RESET_MAP:
+      return {
+        ...state,
+        selectedZoneId: null,
+        selectedLevelId: null,
+        activeLevels: [],
       }
     default:
       return state;

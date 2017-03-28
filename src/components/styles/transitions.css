@@ -1,0 +1,23 @@
+.animate-levels-enter {
+  opacity: 0.01;
+  transform: translateY(65vmax);
+}
+
+.animate-levels-enter.animate-levels-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+  transition: transform 500ms ease-in;
+  transform: translateY(0);
+}
+
+.animate-levels-leave {
+  opacity: 1;
+  transform: translateY(65vmax);
+}
+
+.animate-levels-leave.animate-levels-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+  transition: transform 500ms ease-in;
+  transform: translateY(0);
+}

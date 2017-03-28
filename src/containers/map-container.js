@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { initializeApp, selectZone } from '../actions/map-actions';
+import {  initializeApp,
+          selectZone } from '../actions/map-actions';
 import MapComponent from '../components/map-component';
 
 const mapStateToProps = (state) => {
