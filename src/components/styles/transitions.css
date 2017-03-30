@@ -1,23 +1,61 @@
 .animate-levels-enter {
   opacity: 0.01;
   transform: translateY(65vmax);
-}
+  transform: translateX(20vmax); }
 
 .animate-levels-enter.animate-levels-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
   transition: transform 500ms ease-in;
   transform: translateY(0);
-}
+  transform: translateX(0); }
+
+.animate-levels-appear {
+  opacity: 0.01;
+  transform: translateY(65vmax);
+  transform: translateX(20vmax); }
+
+.animate-levels-appear.animate-levels-appear-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+  transition: transform 500ms ease-in;
+  transform: translateY(0);
+  transform: translateX(0); }
 
 .animate-levels-leave {
   opacity: 1;
-  transform: translateY(65vmax);
-}
+  transform: translateY(65vmax); }
 
 .animate-levels-leave.animate-levels-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
   transition: transform 500ms ease-in;
+  transform: translateY(0); }
+
+.animate-zones-enter {
+  opacity: 0.01;
+  transform: translateY(65vmax);
+  transform: rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin);
+  transition: all 1s; }
+
+.animate-zones-enter.animate-zones-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+  transition: transform 500ms ease-in;
   transform: translateY(0);
-}
+  transform: rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin);
+  transition: all 1s; }
+
+.animate-zones-leave {
+  opacity: 1;
+  transform: translateY(65vmax);
+  transform: rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin);
+  transition: all 1s; }
+
+.animate-zones-leave.animate-zones-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+  transition: transform 500ms ease-in;
+  transform: translateY(0);
+  transform: rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin);
+  transition: all 1s; }

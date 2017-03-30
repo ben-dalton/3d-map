@@ -2,6 +2,7 @@ import { zones } from '../data/areas';
 import {
   INIT_APP,
   SELECT_ZONE,
+  SELECT_LEVEL,
   RESET_MAP
 } from '../actions/action-types';
 
@@ -16,6 +17,12 @@ const initialState = {
 const getSelectedZoneLevels = (zoneId) => {
   const zone = zones.filter(z => z.id === zoneId)[0];
   return zone.levels;
+}
+
+const getSelectedLevel = (state, levelId) => {
+  const level = getSelectedZoneLevels(state.selectedZoneId)
+    .filter(l => l.id === levelId);
+  return level;
 }
 
 function mapApp(state = initialState, action) {
@@ -34,6 +41,12 @@ function mapApp(state = initialState, action) {
         ...state,
         selectedZoneId: action.zoneId,
         activeLevels: getSelectedZoneLevels(action.zoneId)
+      }
+    case SELECT_LEVEL:
+      return {
+        ...state,
+        selectedLevelId: action.levelId,
+        activeLevels: getSelectedLevel(state, action.levelId)
       }
     case RESET_MAP:
       return {

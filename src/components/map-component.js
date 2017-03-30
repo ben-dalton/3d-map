@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Surroundings from './surroundings';
-import Overview from './overview';
-import Level from './level';
 import styled from 'styled-components';
+import Footprint from './footprint';
+import Level from './level';
 import './styles/transitions.css';
 
 class MapComponent extends Component {
@@ -28,20 +27,25 @@ class MapComponent extends Component {
     `;
     return (
       <div className="mall">
-        <Surroundings
+        <Footprint
           selectedZoneId={this.props.selectedZoneId}
+          onSelectZone={this.props.onSelectZone}
         />
-        <Overview
-          selectedZoneId={this.props.selectedZoneId}
-          onSelectZone={this.props.onSelectZone} />
         <Levels
           transitionName='animate-levels'
           transitionEnterTimeout={500}
           transitionLeaveTimeout={500}
+          transitionAppear={true}
+          transitionAppearTimeout={500}
           component='div'
           className='levels'>
           {this.props.selectedZoneId && this.props.activeLevels.map(l => {
-              return <Level key={l.id} level={l} />
+            return <Level
+                      selectedZoneId={this.props.selectedZoneId}
+                      onSelectLevel={this.props.onSelectLevel}
+                      key={l.id || 1010101}
+                      level={l}
+                    />
             }
           )}
         </Levels>
