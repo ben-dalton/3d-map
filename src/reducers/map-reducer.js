@@ -19,11 +19,11 @@ const getSelectedZoneLevels = (zoneId) => {
   return zone.levels;
 }
 
-const getSelectedLevel = (state, levelId) => {
-  const level = getSelectedZoneLevels(state.selectedZoneId)
-    .filter(l => l.id === levelId);
-  return level;
-}
+// const getSelectedLevel = (state, levelId) => {
+//   const level = getSelectedZoneLevels(state.selectedZoneId)
+//     .filter(l => l.id === levelId);
+//   return level;
+// }
 
 function mapApp(state = initialState, action) {
   switch (action.type) {
@@ -45,8 +45,7 @@ function mapApp(state = initialState, action) {
     case SELECT_LEVEL:
       return {
         ...state,
-        selectedLevelId: action.levelId,
-        activeLevels: getSelectedLevel(state, action.levelId)
+        selectedLevelId: action.levelId
       }
     case RESET_MAP:
       return {

@@ -15,21 +15,19 @@ class MapComponent extends Component {
           selectedZoneId={this.props.selectedZoneId}
           onSelectZone={this.props.onSelectZone}
         />
-        { this.props.selectedZoneId &&
-          <div
-            className={this.props.selectedLevelId ? `levels levels--open levels--selected-${this.props.selectedLevelId}` : 'levels'}>
-            {this.props.selectedZoneId && this.props.activeLevels.map(l => {
-              return <Level
-                        selectedZoneId={this.props.selectedZoneId}
-                        onSelectLevel={this.props.onSelectLevel}
-                        selectedLevelId={this.props.selectedLevelId}
-                        key={l.id || 1010101}
-                        level={l}
-                      />
-              }
-            )}
-          </div>
-        }
+        <div
+          className={this.props.selectedLevelId ? `levels levels--open levels--selected-${this.props.selectedLevelId}` : 'levels'}>
+          {this.props.selectedZoneId && this.props.activeLevels.map(l => {
+            return <Level
+                      selectedZoneId={this.props.selectedZoneId}
+                      onSelectLevel={this.props.onSelectLevel}
+                      selectedLevelId={this.props.selectedLevelId}
+                      key={l.id || 1010101}
+                      level={l}
+                    />
+            }
+          )}
+        </div>
       </div>
     );
   }

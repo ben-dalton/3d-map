@@ -1,5 +1,5 @@
 export const FootprintZoneSelected = {
-  transform: 'rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin)',
+  transform: 'rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin) translateX(-30vmin)',
   transition: 'all 1s',
   opacity: 0
 };
