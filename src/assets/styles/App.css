@@ -285,17 +285,18 @@ aside {
   background-size: cover;
   -o-background-size: cover;
   -webkit-animation-duration: 2s; }
-  #header:before {
-    background: -moz-radial-gradient(rgba(0, 0, 0, 0.4), transparent);
-    background: -webkit-radial-gradient(rgba(0, 0, 0, 0.4), transparent);
-    background: radial-gradient(rgba(0, 0, 0, 0.4), transparent);
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; }
+
+#header:before {
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0.4), transparent);
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.4), transparent);
+  background: radial-gradient(rgba(0, 0, 0, 0.4), transparent);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
 
 #header .header-content {
   position: relative;
@@ -654,7 +655,8 @@ button:focus {
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d;
+  transform: translateZ(0vmin); }
 
 .level::after {
   font-size: 2.5vmin;

@@ -10,13 +10,3 @@ export const FootprintNoZone = {
   opacity: 1
 };
 
-export const LevelEnter = {
-  transform: 'translateZ(10vmin)',
-  opacity: 0,
-  transition: 'all 1s'
-};
-
-export const LevelLeave = {
-  opacity: 1,
-  transition: 'all 1s'
-};

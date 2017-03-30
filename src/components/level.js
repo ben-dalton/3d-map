@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import styled from 'styled-components';
-import { LevelEnter, LevelLeave } from './styles/transform-styles';
+import './styles/transitions.css';
 
 class Level extends Component {
   render() {
@@ -20,16 +21,22 @@ class Level extends Component {
         cursor: pointer;
     `;
     return (
-      <div
+      <ReactCSSTransitionGroup
+        transitionName="level"
+        transitionEnter={false}
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionLeave={true}
+        transitionLeaveTimeout={500}
+        component="div"
         className={`level level--${this.props.level.id}
           ${this.props.level.id === this.props.selectedLevelId ? 'level--current' : ''}`}
-        style={this.props.selectedZoneId ? LevelLeave : LevelEnter}
         onClick={() => this.props.onSelectLevel(this.props.level.id)}
       >
         <Svg version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 500" x="0px" y="0px" xmlSpace="preserve">
           <Polygon class="st0" fill={this.props.level.color} points={this.props.level.points} />
         </Svg>
-      </div>
+      </ReactCSSTransitionGroup>
     );
   }
 };
