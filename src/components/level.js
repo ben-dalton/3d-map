@@ -19,22 +19,43 @@ class Level extends Component {
       &:hover {
         fill: #666;
         cursor: pointer;
+      }
+      &.level-selected:hover {
+        fill: ${props => props.fill};
+        cursor: normal;
+      }
     `;
     return (
       <ReactCSSTransitionGroup
         transitionName="level"
         transitionEnter={false}
         transitionAppear={true}
-        transitionAppearTimeout={500}
+        transitionAppearTimeout={1500}
         transitionLeave={true}
-        transitionLeaveTimeout={500}
+        transitionLeaveTimeout={1500}
         component="div"
         className={`level level--${this.props.level.id}
           ${this.props.level.id === this.props.selectedLevelId ? 'level--current' : ''}`}
         onClick={() => this.props.onSelectLevel(this.props.level.id)}
       >
         <Svg version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 500" x="0px" y="0px" xmlSpace="preserve">
-          <Polygon class="st0" fill={this.props.level.color} points={this.props.level.points} />
+          <Polygon className={this.props.selectedLevelId && 'level-selected'} fill={this.props.level.color} points={this.props.level.points} />
+          {this.props.level.naming_ops && this.props.level.naming_ops.map(n => {
+            if (n.svgElement === 'rect') {
+              return (
+                <rect
+                  key={n.id}
+                  x={n.x}
+                  y={n.y}
+                  width={n.width}
+                  height={n.height}
+                  style={{ fill: 'none', stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}
+                />
+              );
+            } else if (n.svgElement === 'polygon') {
+              return (<polygon></polygon>);
+            } else {return <div></div>}
+          })}
         </Svg>
       </ReactCSSTransitionGroup>
     );
