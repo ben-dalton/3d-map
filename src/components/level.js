@@ -53,7 +53,13 @@ class Level extends Component {
                 />
               );
             } else if (n.svgElement === 'polygon') {
-              return (<polygon></polygon>);
+              return (
+                <polygon
+                  key={n.id}
+                  points={n.points}
+                  style={{ fill: 'none', stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}
+                />
+              );
             } else {return <div></div>}
           })}
         </Svg>
