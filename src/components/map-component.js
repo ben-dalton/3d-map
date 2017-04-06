@@ -5,23 +5,22 @@ import './styles/transitions.css';
 
 class MapComponent extends Component {
   componentWillMount() {
-    this.props.onInit();
     document.body.className = 'animated fadeIn';
   }
   render() {
     return (
       <div className="mall">
         <Footprint
-          selectedZoneId={this.props.selectedZoneId}
+          activeZone={this.props.activeZone}
           onSelectZone={this.props.onSelectZone}
         />
         <div
-          className={this.props.selectedLevelId ? `levels levels--open levels--selected-${this.props.selectedLevelId}` : 'levels'}>
-          {this.props.selectedZoneId && this.props.activeLevels.map(l => {
+          className={this.props.activeLevel ? `levels levels--open levels--selected-${this.props.activeLevel.id}` : 'levels'}>
+          {this.props.activeZone && this.props.activeZone.levels.map(l => {
             return <Level
-                      selectedZoneId={this.props.selectedZoneId}
+                      activeZone={this.props.activeZone}
                       onSelectLevel={this.props.onSelectLevel}
-                      selectedLevelId={this.props.selectedLevelId}
+                      activeLevel={this.props.activeLevel}
                       key={l.id || 1010101}
                       level={l}
                     />

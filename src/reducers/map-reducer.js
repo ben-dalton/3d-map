@@ -1,59 +1,58 @@
 import { zones } from '../data/areas';
 import undoable from 'redux-undo';
 import {
-  INIT_APP,
   SELECT_ZONE,
   SELECT_LEVEL,
+  SELECT_NAMING_OP,
   RESET_MAP
 } from '../actions/action-types';
 
+// need to change from depending on ids and finding objects to putting
+// objects in state based on ids passed through actions.
 const initialState = {
-  initialized: false,
-  selectedZoneId: null,
-  selectedLevelId: null,
-  activeLevels: [],
-  zones
+  zones,
+  activeZone: null,
+  activeLevel: null,
+  activeNamingOp: null
 }
 
-const getSelectedZoneLevels = (zoneId) => {
-  const zone = zones.filter(z => z.id === zoneId)[0];
-  return zone.levels;
+const getSelectedNamingOp = (state, namingOpId) => {
+  return state.activeLevel.naming_ops
+              .filter(n => n.id === namingOpId)[0];
+};
+
+const getSelectedLevel = (state, levelId) => {
+  return state.activeZone.levels
+              .filter(l => l.id === levelId)[0];
 }
 
-// const getSelectedLevel = (state, levelId) => {
-//   const level = getSelectedZoneLevels(state.selectedZoneId)
-//     .filter(l => l.id === levelId);
-//   return level;
-// }
+const getSelectedZone = (zoneId) => {
+  return zones.filter(z => z.id === zoneId)[0];
+}
 
 function mapApp(state = initialState, action) {
   switch (action.type) {
-    case INIT_APP:
-      if (state.initialized) {
-        return state;
-      } else {
-        return {
-          ...state,
-          initialized: true
-        }
-      }
     case SELECT_ZONE:
       return {
         ...state,
-        selectedZoneId: action.zoneId,
-        activeLevels: getSelectedZoneLevels(action.zoneId)
+        activeZone: getSelectedZone(action.zoneId)
       }
     case SELECT_LEVEL:
       return {
         ...state,
-        selectedLevelId: action.levelId
+        activeLevel: getSelectedLevel(state, action.levelId)
+      }
+    case SELECT_NAMING_OP:
+      return {
+        ...state,
+        activeNamingOp: getSelectedNamingOp(state, action.namingOpId)
       }
     case RESET_MAP:
       return {
         ...state,
-        selectedZoneId: null,
-        selectedLevelId: null,
-        activeLevels: [],
+        activeZone: null,
+        activeLevel: null,
+        activeNamingOp: null
       }
     default:
       return state;

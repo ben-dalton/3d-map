@@ -10,7 +10,7 @@ class Zones extends Component {
       margin-left: 5vw;
     `;
     const Zone1 = styled.polygon`
-      fill: ${props => props.zoneSelected ? 'none' : '#ef9c00'};
+      fill: ${props => props.activeZone ? 'none' : '#ef9c00'};
       stroke: #000000;
       stroke-width: 4.1783;
       stroke-linecap: square;

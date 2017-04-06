@@ -1,15 +1,9 @@
 import {
-  INIT_APP,
   SELECT_ZONE,
   SELECT_LEVEL,
+  SELECT_NAMING_OP,
   RESET_MAP
 } from './action-types';
-
-export function initializeApp() {
-  return {
-    type: INIT_APP
-  }
-}
 
 export function selectZone(zoneId) {
   return {
@@ -28,5 +22,12 @@ export function selectLevel(levelId) {
 export function resetMap() {
   return {
     type: RESET_MAP
+  }
+}
+
+export function selectNamingOp(namingOpId) {
+  return {
+    type: SELECT_NAMING_OP,
+    namingOpId
   }
 }

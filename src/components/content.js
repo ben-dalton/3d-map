@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Content extends Component {
   render() {
     return (
-      <div className={`content ${this.props.current_naming_op && 'content--open'}`}>
+      <div className={`content ${this.props.activeNamingOp && 'content--open'}`}>
         <div className="content__item">
           <h3 className="content__item-title">Apple Heart</h3>
           <div className="content__item-details">
