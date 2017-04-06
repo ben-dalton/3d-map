@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import {  initializeApp,
           selectZone,
           selectLevel } from '../actions/map-actions';
-import MapComponent from '../components/map-component';
+import Content from '../components/content';
 
 const mapStateToProps = (state) => {
   return {
@@ -28,9 +28,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const MapContainer = connect(
+const ContentContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(MapComponent);
+)(Content);
 
-export default MapContainer;
+export default ContentContainer;

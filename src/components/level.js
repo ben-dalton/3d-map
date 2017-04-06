@@ -35,12 +35,12 @@ class Level extends Component {
         transitionLeaveTimeout={1500}
         component="div"
         className={`level level--${this.props.level.id}
-          ${this.props.level.id === this.props.selectedLevelId ? 'level--current' : ''}`}
+          ${this.props.level.id === this.props.selectedLevelId ? 'level--current' : 'level--no-current'}`}
         onClick={() => this.props.onSelectLevel(this.props.level.id)}
       >
         <Svg version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 500" x="0px" y="0px" xmlSpace="preserve">
           <Polygon className={this.props.selectedLevelId && 'level-selected'} fill={this.props.level.color} points={this.props.level.points} />
-          {this.props.level.naming_ops && this.props.level.naming_ops.map(n => {
+          {this.props.selectedLevelId && this.props.level.naming_ops && this.props.level.naming_ops.map(n => {
             if (n.svgElement === 'rect') {
               return (
                 <rect

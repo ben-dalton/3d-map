@@ -260,9 +260,27 @@ button:focus {
 /* Current level */
 
 .level.level--current {
-	-webkit-transform: translateZ(15vmin) rotate3d(0,0,1,20deg);
+	-webkit-transform: translateZ(15vmin) rotate3d(-1,-1,1,20deg);
 	/* go to center */
-	transform: translateZ(15vmin) rotate3d(0,0,1,20deg);
+	transform: translateZ(15vmin) rotate3d(-1,-1,1,20deg);
+}
+
+.level > Svg {
+  polygon:not(:first-child), rect {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+}
+.level.level--current > Svg {
+  polygon:not(:first-child), rect {
+    opacity: 1;
+    transition: opacity 1s;
+    &:hover {
+      fill: #999 !important;
+      stroke: #aaa !important;
+      cursor: pointer;
+    }
+  }
 }
 
 /* Navigation classes */

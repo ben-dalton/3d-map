@@ -1,4 +1,5 @@
 import { zones } from '../data/areas';
+import undoable from 'redux-undo';
 import {
   INIT_APP,
   SELECT_ZONE,
@@ -59,5 +60,6 @@ function mapApp(state = initialState, action) {
   }
 }
 
+const undoableMapApp = undoable(mapApp);
 
-export default mapApp;
+export default undoableMapApp;
