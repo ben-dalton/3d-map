@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import {  selectZone,
           selectLevel,
-          selectNamingOp } from '../actions/map-actions';
+          selectNamingOp,
+          updateNamingOps } from '../actions/map-actions';
 import MapComponent from '../components/map-component';
 
 const mapStateToProps = (state) => {
@@ -23,6 +24,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     onSelectNamingOp: namingOpId => {
       dispatch(selectNamingOp(namingOpId));
+    },
+    onUpdateNamingOps: () => {
+      dispatch(updateNamingOps());
     }
   }
 }

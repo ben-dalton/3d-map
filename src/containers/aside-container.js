@@ -9,7 +9,8 @@ const mapStateToProps = (state) => {
     zones: state.present.zones,
     activeZone: state.present.activeZone,
     activeLevel: state.present.activeLevel,
-    activeNamingOp: state.present.activeNamingOp
+    activeNamingOp: state.present.activeNamingOp,
+    available_naming_ops: state.present.available_naming_ops
   };
 }
 

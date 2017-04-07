@@ -5,6 +5,7 @@ import {
   SELECT_LEVEL,
   SELECT_NAMING_OP,
   CLOSE_NAMING_OP,
+  UPDATE_NAMING_OPS,
   RESET_MAP
 } from '../actions/action-types';
 
@@ -14,11 +15,13 @@ const initialState = {
   zones,
   activeZone: null,
   activeLevel: null,
-  activeNamingOp: null
+  activeNamingOp: null,
+  available_naming_ops: []
 }
 
 const getSelectedNamingOp = (state, namingOpId) => {
-  return state.activeLevel.naming_ops
+  const ops = [].concat.apply([], state.available_naming_ops)[0];
+  return ops.naming_ops
               .filter(n => n.id === namingOpId)[0];
 };
 
@@ -29,6 +32,36 @@ const getSelectedLevel = (state, levelId) => {
 
 const getSelectedZone = (zoneId) => {
   return zones.filter(z => z.id === zoneId)[0];
+}
+
+const getAvailableNamingOps = (state) => {
+  let available_zones = state.activeZone ? [state.activeZone] : zones;
+  let available_naming_ops = available_zones.map(z => {
+    if(state.activeLevel) {
+      return {
+        zone_label: z.label,
+        naming_ops: state.activeLevel.naming_ops.map(n => {
+          return {
+            ...n,
+            level_label: state.activeLevel.label
+          }
+        })
+      }
+    } else {
+      return {
+        zone_label: z.label,
+        naming_ops: [].concat.apply([], z.levels.map(l => {
+          return l.naming_ops.map(n => {
+            return {
+              ...n,
+              level_label: l.label
+            };
+          })
+        }))
+      }
+    }
+  });
+  return available_naming_ops;
 }
 
 function mapApp(state = initialState, action) {
@@ -52,6 +85,11 @@ function mapApp(state = initialState, action) {
       return {
         ...state,
         activeNamingOp: null
+      }
+    case UPDATE_NAMING_OPS:
+      return {
+        ...state,
+        available_naming_ops: getAvailableNamingOps(state)
       }
     case RESET_MAP:
       return {

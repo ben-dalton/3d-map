@@ -6,6 +6,10 @@ import './styles/transitions.css';
 class MapComponent extends Component {
   componentWillMount() {
     document.body.className = 'animated fadeIn';
+    this.props.onUpdateNamingOps();
+  }
+  componentDidUpdate() {
+    this.props.onUpdateNamingOps();
   }
   render() {
     return (

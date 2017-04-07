@@ -3,6 +3,7 @@ import {
   SELECT_LEVEL,
   SELECT_NAMING_OP,
   CLOSE_NAMING_OP,
+  UPDATE_NAMING_OPS,
   RESET_MAP
 } from './action-types';
 
@@ -36,5 +37,11 @@ export function selectNamingOp(namingOpId) {
 export function closeNamingOp() {
   return {
     type: CLOSE_NAMING_OP
+  }
+}
+
+export function updateNamingOps() {
+  return {
+    type: UPDATE_NAMING_OPS
   }
 }
