@@ -13,8 +13,8 @@ const App = () => (
       <ConnectedUndoRedo />
       <MapContainer />
       <ContentContainer />
-      <AsideContainer />
     </div>
+    <AsideContainer />
   </div>
 );
 

@@ -107,9 +107,9 @@ button:focus {
 }
 
 .levels {
-	width: 96vmin;
-	height: 64vmin;
-	margin: -32vmin 0 0 -48vmin;
+	width: 50vmin;
+	height: 65vmin;
+	margin: -45vmin 0 0 -23vmin;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 	-webkit-transform-style: preserve-3d;
@@ -124,8 +124,8 @@ button:focus {
 
 .level {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
 	cursor: pointer;
 	pointer-events: auto;
 	-webkit-transition: opacity 1s, -webkit-transform 1s;
@@ -191,7 +191,8 @@ button:focus {
 	transform: translateZ(10vmin);
 }
 
-.level--3 { -webkit-transform: translateZ(20vmin);
+.level--3 {
+  -webkit-transform: translateZ(20vmin);
 	transform: translateZ(20vmin);
 }
 

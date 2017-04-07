@@ -5,14 +5,14 @@
 }
 
 .map__outline {
-	-webkit-transition: fill 0.3s;
-	transition: fill 0.3s;
-	fill: #bbb;
+	-webkit-transition: stroke 0.3s;
+	transition: stroke 0.3s;
+	stroke: #999;
 }
 
 .level:hover .map__outline,
 .level--current .map__outline {
-	fill: #a6a3a8;
+	stroke: #777;
 }
 
 .map__tree {

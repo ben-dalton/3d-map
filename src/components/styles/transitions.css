@@ -1,7 +1,12 @@
 .level-appear {
   opacity: 0;
   top: 200px;
-  left: -200px; }
+  left: -200px;
+  -webkit-transform: translateZ(0vmin);
+  transform: translateZ(0vmin);
+  transition: transform 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s; }
 
 .level-appear.level-appear-active {
   position: relative;

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import React from 'react'
 
 let UndoRedo = ({ canUndo, canRedo, onUndo, onRedo }) => (
-  <div>
+  <div className="text-center">
     <button onClick={onUndo} disabled={!canUndo}>
       <div className="glyphicon glyphicon-arrow-left" />
     </button>

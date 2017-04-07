@@ -6,18 +6,18 @@ import './styles/transitions.css';
 class Level extends Component {
   render() {
     const Svg = styled.svg`
-      width: 90vw;
-      height: 90vh;
-      margin-left: 5vw;
+      width: 50vw;
+      height: 59vh;
+      max-width: 100%;
+      max-height: 100%;
     `;
     const Polygon = styled.polygon`
       fill: ${props => props.fill};
-      stroke: #000000;
       stroke-width: 4.1783;
       stroke-linecap: square;
       stroke-miterlimit: 10;
       &:hover {
-        fill: #666;
+        stroke: #666;
         cursor: pointer;
       }
       &.level-selected:hover {
@@ -38,8 +38,8 @@ class Level extends Component {
           ${this.props.activeLevel && (this.props.level.id === this.props.activeLevel.id) ? 'level--current' : 'level--no-current'}`}
         onClick={!this.props.activeLevel ? () => this.props.onSelectLevel(this.props.level.id) : ''}
       >
-        <Svg version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 500" x="0px" y="0px" xmlSpace="preserve">
-          <Polygon className={this.props.activeLevel && 'level-selected'} fill={this.props.level.color} points={this.props.level.points} />
+        <Svg version="1.1" preserveAspectRatio="xMidYMid meet" viewBox="10 -10 200 300" xmlSpace="preserve">
+          <Polygon className={`map__outline ${this.props.activeLevel && 'level-selected'}`} fill={this.props.level.color} points={this.props.level.points} />
           {this.props.activeLevel && this.props.level.naming_ops && this.props.level.naming_ops.map(n => {
             if (n.svgElement === 'rect') {
               return (
