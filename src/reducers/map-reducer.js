@@ -4,6 +4,7 @@ import {
   SELECT_ZONE,
   SELECT_LEVEL,
   SELECT_NAMING_OP,
+  CLOSE_NAMING_OP,
   RESET_MAP
 } from '../actions/action-types';
 
@@ -46,6 +47,11 @@ function mapApp(state = initialState, action) {
       return {
         ...state,
         activeNamingOp: getSelectedNamingOp(state, action.namingOpId)
+      }
+    case CLOSE_NAMING_OP:
+      return {
+        ...state,
+        activeNamingOp: null
       }
     case RESET_MAP:
       return {

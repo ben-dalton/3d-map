@@ -44,6 +44,7 @@ class Level extends Component {
             if (n.svgElement === 'rect') {
               return (
                 <rect
+                  onClick={() => this.props.onSelectNamingOp(n.id)}
                   key={n.id}
                   x={n.x}
                   y={n.y}
@@ -55,12 +56,13 @@ class Level extends Component {
             } else if (n.svgElement === 'polygon') {
               return (
                 <polygon
+                  onClick={() => this.props.onSelectNamingOp(n.id)}
                   key={n.id}
                   points={n.points}
                   style={{ fill: 'none', stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}
                 />
               );
-            } else {return <div></div>}
+            } else { return <div></div> }
           })}
         </Svg>
       </ReactCSSTransitionGroup>

@@ -22,8 +22,7 @@
 }
 
 .content--open .content__item {
-	-webkit-transition: none;
-	transition: none;
+  transition: all .5s;
 }
 
 .content__item--current {

@@ -285,17 +285,18 @@ aside {
   background-size: cover;
   -o-background-size: cover;
   -webkit-animation-duration: 2s; }
-  #header:before {
-    background: -moz-radial-gradient(rgba(0, 0, 0, 0.4), transparent);
-    background: -webkit-radial-gradient(rgba(0, 0, 0, 0.4), transparent);
-    background: radial-gradient(rgba(0, 0, 0, 0.4), transparent);
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; }
+
+#header:before {
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0.4), transparent);
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.4), transparent);
+  background: radial-gradient(rgba(0, 0, 0, 0.4), transparent);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
 
 #header .header-content {
   position: relative;
@@ -770,10 +771,11 @@ button:focus {
 .level.level--current > Svg polygon:not(:first-child), .level.level--current > Svg rect {
   opacity: 1;
   transition: opacity 1s; }
-  .level.level--current > Svg polygon:not(:first-child):hover, .level.level--current > Svg rect:hover {
-    fill: #999 !important;
-    stroke: #aaa !important;
-    cursor: pointer; }
+
+.level.level--current > Svg polygon:not(:first-child):hover, .level.level--current > Svg rect:hover {
+  fill: #999 !important;
+  stroke: #aaa !important;
+  cursor: pointer; }
 
 /* Navigation classes */
 .levels--open .level,
@@ -905,8 +907,7 @@ button:focus {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
 
 .content--open .content__item {
-  -webkit-transition: none;
-  transition: none; }
+  transition: all .5s; }
 
 .content__item--current {
   -webkit-transform: translate3d(0, -100%, 0);

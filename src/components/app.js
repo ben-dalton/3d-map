@@ -12,9 +12,9 @@ const App = () => (
       <br />
       <ConnectedUndoRedo />
       <MapContainer />
+      <ContentContainer />
+      <AsideContainer />
     </div>
-    <ContentContainer />
-    <AsideContainer />
   </div>
 );
 

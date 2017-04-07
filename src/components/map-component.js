@@ -9,7 +9,7 @@ class MapComponent extends Component {
   }
   render() {
     return (
-      <div className="mall">
+      <div className={`mall ${this.props.activeNamingOp && 'mall--content-open'}`}>
         <Footprint
           activeZone={this.props.activeZone}
           onSelectZone={this.props.onSelectZone}
@@ -20,6 +20,7 @@ class MapComponent extends Component {
             return <Level
                       activeZone={this.props.activeZone}
                       onSelectLevel={this.props.onSelectLevel}
+                      onSelectNamingOp={this.props.onSelectNamingOp}
                       activeLevel={this.props.activeLevel}
                       key={l.id || 1010101}
                       level={l}
