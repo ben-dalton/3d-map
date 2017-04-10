@@ -34,7 +34,7 @@ export const zones = [
         naming_ops: [
           {
             "id": 1,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 1.7,
@@ -46,7 +46,7 @@ export const zones = [
           },
           {
             "id": 2,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 13.5,
@@ -58,7 +58,7 @@ export const zones = [
           },
           {
             "id": 3,
-            "title": "Naming Op",
+            "title": "Coach's Office",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 22.2,
@@ -70,7 +70,7 @@ export const zones = [
           },
           {
             "id": 4,
-            "title": "Naming Op",
+            "title": "Training Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 30.7,
@@ -82,7 +82,7 @@ export const zones = [
           },
           {
             "id": 5,
-            "title": "Naming Op",
+            "title": "Training Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 39.1,
@@ -94,7 +94,7 @@ export const zones = [
           },
           {
             "id": 6,
-            "title": "Naming Op",
+            "title": "Weight Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 47.8,
@@ -106,7 +106,7 @@ export const zones = [
           },
           {
             "id": 7,
-            "title": "Naming Op",
+            "title": "Weight Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 56,
@@ -118,7 +118,7 @@ export const zones = [
           },
           {
             "id": 8,
-            "title": "Naming Op",
+            "title": "Classroom",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 73.1,
@@ -130,7 +130,7 @@ export const zones = [
           },
           {
             "id": 9,
-            "title": "Naming Op",
+            "title": "Classroom",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 81.5,
@@ -142,7 +142,7 @@ export const zones = [
           },
           {
             "id": 10,
-            "title": "Naming Op",
+            "title": "Classroom",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 89.8,
@@ -154,7 +154,7 @@ export const zones = [
           },
           {
             "id": 11,
-            "title": "Naming Op",
+            "title": "Classroom",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 98.4,
@@ -166,7 +166,7 @@ export const zones = [
           },
           {
             "id": 12,
-            "title": "Naming Op",
+            "title": "Coach's Office",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 115.1,
@@ -178,7 +178,7 @@ export const zones = [
           },
           {
             "id": 13,
-            "title": "Naming Op",
+            "title": "Physical Therapy",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 89.8,
@@ -190,7 +190,7 @@ export const zones = [
           },
           {
             "id": 14,
-            "title": "Naming Op",
+            "title": "Physical Therapy",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -202,7 +202,7 @@ export const zones = [
           },
           {
             "id": 15,
-            "title": "Naming Op",
+            "title": "Physical Therapy",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 22.2,
@@ -214,7 +214,7 @@ export const zones = [
           },
           {
             "id": 16,
-            "title": "Naming Op",
+            "title": "Tutoring Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 64.4,
@@ -226,7 +226,7 @@ export const zones = [
           },
           {
             "id": 17,
-            "title": "Naming Op",
+            "title": "Tutoring Room",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -238,7 +238,7 @@ export const zones = [
           },
           {
             "id": 18,
-            "title": "Naming Op",
+            "title": "Tutoring Room",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -250,7 +250,7 @@ export const zones = [
           },
           {
             "id": 19,
-            "title": "Naming Op",
+            "title": "Tutoring Room",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -262,7 +262,7 @@ export const zones = [
           },
           {
             "id": 20,
-            "title": "Naming Op",
+            "title": "Tutoring Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 64.4,
@@ -274,7 +274,7 @@ export const zones = [
           },
           {
             "id": 21,
-            "title": "Naming Op",
+            "title": "Conference Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 1.7,
@@ -286,7 +286,7 @@ export const zones = [
           },
           {
             "id": 22,
-            "title": "Naming Op",
+            "title": "Conference Room",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -298,7 +298,7 @@ export const zones = [
           },
           {
             "id": 23,
-            "title": "Naming Op",
+            "title": "Conference Room",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -310,7 +310,7 @@ export const zones = [
           },
           {
             "id": 24,
-            "title": "Naming Op",
+            "title": "Conference Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 123.7,
@@ -322,7 +322,7 @@ export const zones = [
           },
           {
             "id": 25,
-            "title": "Naming Op",
+            "title": "Conference Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 136.8,
@@ -334,7 +334,7 @@ export const zones = [
           },
           {
             "id": 26,
-            "title": "Naming Op",
+            "title": "Conference Room",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -346,7 +346,7 @@ export const zones = [
           },
           {
             "id": 27,
-            "title": "Naming Op",
+            "title": "Conference Room",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 129.1,
@@ -358,7 +358,7 @@ export const zones = [
           },
           {
             "id": 28,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 136.4,
@@ -370,7 +370,7 @@ export const zones = [
           },
           {
             "id": 29,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -382,7 +382,7 @@ export const zones = [
           },
           {
             "id": 30,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -394,7 +394,7 @@ export const zones = [
           },
           {
             "id": 31,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "rect",
             "x": 122.5,
@@ -406,7 +406,7 @@ export const zones = [
           },
           {
             "id": 32,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -418,7 +418,7 @@ export const zones = [
           },
           {
             "id": 33,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -430,7 +430,7 @@ export const zones = [
           },
           {
             "id": 34,
-            "title": "Naming Op",
+            "title": "Classroom",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -442,7 +442,7 @@ export const zones = [
           },
           {
             "id": 35,
-            "title": "Naming Op",
+            "title": "Classroom",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -454,7 +454,7 @@ export const zones = [
           },
           {
             "id": 36,
-            "title": "Naming Op",
+            "title": "Classroom",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -466,7 +466,7 @@ export const zones = [
           },
           {
             "id": 37,
-            "title": "Naming Op",
+            "title": "Classroom",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -478,7 +478,7 @@ export const zones = [
           },
           {
             "id": 38,
-            "title": "Naming Op",
+            "title": "Classroom",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -490,7 +490,7 @@ export const zones = [
           },
           {
             "id": 39,
-            "title": "Naming Op",
+            "title": "Training",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -502,7 +502,7 @@ export const zones = [
           },
           {
             "id": 40,
-            "title": "Naming Op",
+            "title": "Training",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -514,7 +514,7 @@ export const zones = [
           },
           {
             "id": 41,
-            "title": "Naming Op",
+            "title": "Training",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -526,7 +526,7 @@ export const zones = [
           },
           {
             "id": 42,
-            "title": "Naming Op",
+            "title": "Gym",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -538,7 +538,7 @@ export const zones = [
           },
           {
             "id": 43,
-            "title": "Naming Op",
+            "title": "Gym",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -550,7 +550,7 @@ export const zones = [
           },
           {
             "id": 44,
-            "title": "Naming Op",
+            "title": "Weight Room",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -562,7 +562,7 @@ export const zones = [
           },
           {
             "id": 45,
-            "title": "Naming Op",
+            "title": "Weight Room",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -574,7 +574,7 @@ export const zones = [
           },
           {
             "id": 46,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -586,7 +586,7 @@ export const zones = [
           },
           {
             "id": 47,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -598,7 +598,7 @@ export const zones = [
           },
           {
             "id": 48,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,
@@ -610,7 +610,7 @@ export const zones = [
           },
           {
             "id": 49,
-            "title": "Naming Op",
+            "title": "Office",
             "description": "Lorem ipsum...",
             "svgElement": "polygon",
             "x": null,

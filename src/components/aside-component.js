@@ -1,6 +1,29 @@
 import React, { Component } from 'react';
 
 class AsideComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchTerm: '',
+      currentlyDisplayed: this.props.available_naming_ops
+    }
+    this.onInputChange = this.onInputChange.bind(this);
+  }
+
+  onInputChange(term) {
+    let newlyDisplayed = this.props.available_naming_ops.map(zone => {
+      return {
+        ...zone,
+        naming_ops: zone.naming_ops.filter(n => n.title.toLowerCase().includes(term.toLowerCase()))
+      }
+    });
+
+    this.setState({
+      searchTerm: term,
+      currentlyDisplayed: newlyDisplayed
+    })
+  }
+
   render() {
     const zoneList = zone => {
       return (
@@ -20,16 +43,15 @@ class AsideComponent extends Component {
     return (
       <aside className="spaces-list" id="spaces-list">
         <div className="search">
-          <input className="search__input" placeholder="Search..." />
+          <input
+            onChange={event => this.onInputChange(event.target.value)}
+            value={this.state.searchTerm}
+            className="search__input" placeholder="Search..." />
           <button className="boxbutton boxbutton--darker close-search">
           </button>
         </div>
-        <span className="label">
-          <input id="sort-by-name" className="label__checkbox" type="checkbox" />
-          <label className="label__text">A - Z</label>
-        </span>
         <ul  className="list grouped-by-category">
-          { this.props.available_naming_ops.map(zone => zoneList(zone)) }
+          { this.state.currentlyDisplayed.map(zone => zoneList(zone)) }
         </ul>
       </aside>
     );

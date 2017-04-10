@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import photo1 from '../assets/images/photo1.jpg';
 
 class Content extends Component {
   render() {
     return (
       <div className={`content ${this.props.activeNamingOp && 'content--open'}`}>
         <div className={`content__item ${this.props.activeNamingOp && 'content__item--current'}`}>
-          <h3 className="content__item-title">{this.props.activeNamingOp && this.props.activeNamingOp.title}</h3>
+          <h3 className="content__item-title">
+            {this.props.activeNamingOp && this.props.activeNamingOp.title}
+            {this.props.activeNamingOp && this.props.activeNamingOp.id}
+          </h3>
           <div className="content__item-details">
-            <img className="content_image" src={photo1} alt="" />
+            <img className="content_image" src={process.env.PUBLIC_URL + '/assets/images/photo1.jpg'} alt="" />
             <p className="content__meta">
               <span className="content__meta-item"><strong>Opening Hours:</strong> 6:30AM — 11:30PM</span>
               <span className="content__meta-item"><strong>Phone:</strong> (0) 66 5738902</span>

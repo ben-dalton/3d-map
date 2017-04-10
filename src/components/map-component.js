@@ -8,9 +8,6 @@ class MapComponent extends Component {
     document.body.className = 'animated fadeIn';
     this.props.onUpdateNamingOps();
   }
-  componentDidUpdate() {
-    this.props.onUpdateNamingOps();
-  }
   render() {
     return (
       <div className={`mall ${this.props.activeNamingOp && 'mall--content-open'}`}>
@@ -20,8 +17,8 @@ class MapComponent extends Component {
         />
         <div
           className={this.props.activeLevel ? `levels levels--open levels--selected-${this.props.activeLevel.id}` : 'levels'}>
-          {this.props.activeZone && this.props.activeZone.levels.map(l => {
-            return <Level
+          { this.props.activeZone && this.props.activeZone.levels.map(l => {
+            return  <Level
                       activeZone={this.props.activeZone}
                       onSelectLevel={this.props.onSelectLevel}
                       onSelectNamingOp={this.props.onSelectNamingOp}

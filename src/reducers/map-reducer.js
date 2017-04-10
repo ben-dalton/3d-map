@@ -22,7 +22,7 @@ const initialState = {
 const getSelectedNamingOp = (state, namingOpId) => {
   const ops = [].concat.apply([], state.available_naming_ops)[0];
   return ops.naming_ops
-              .filter(n => n.id === namingOpId)[0];
+            .filter(n => n.id === namingOpId)[0];
 };
 
 const getSelectedLevel = (state, levelId) => {
