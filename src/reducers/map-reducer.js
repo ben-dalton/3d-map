@@ -6,6 +6,8 @@ import {
   SELECT_NAMING_OP,
   CLOSE_NAMING_OP,
   UPDATE_NAMING_OPS,
+  PREVIEW_NAMING_OP,
+  CLEAR_PREVIEW,
   RESET_MAP
 } from '../actions/action-types';
 
@@ -90,6 +92,16 @@ function mapApp(state = initialState, action) {
       return {
         ...state,
         available_naming_ops: getAvailableNamingOps(state)
+      }
+    case PREVIEW_NAMING_OP:
+      return {
+        ...state,
+        previewTitle: action.title
+      }
+    case CLEAR_PREVIEW:
+      return {
+        ...state,
+        previewTitle: null
       }
     case RESET_MAP:
       return {

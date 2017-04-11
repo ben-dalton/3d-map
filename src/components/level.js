@@ -45,6 +45,8 @@ class Level extends Component {
               return (
                 <rect
                   onClick={() => this.props.onSelectNamingOp(n.id)}
+                  onMouseEnter={() => this.props.onPreviewNamingOp(n.title)}
+                  onMouseLeave={() => this.props.onClearPreview()}
                   key={n.id}
                   x={n.x}
                   y={n.y}
@@ -57,6 +59,8 @@ class Level extends Component {
               return (
                 <polygon
                   onClick={() => this.props.onSelectNamingOp(n.id)}
+                  onMouseEnter={() => this.props.onPreviewNamingOp(n.title)}
+                  onMouseLeave={() => this.props.onClearPreview()}
                   key={n.id}
                   points={n.points}
                   style={{ fill: 'none', stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}

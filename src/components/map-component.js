@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Footprint from './footprint';
 import Level from './level';
 import './styles/transitions.css';
+import styled from 'styled-components';
 
 class MapComponent extends Component {
   componentWillMount() {
@@ -9,6 +10,13 @@ class MapComponent extends Component {
     this.props.onUpdateNamingOps();
   }
   render() {
+    const Preview = styled.div`
+      position: fixed;
+      text-align: center;
+      bottom: 30vh;
+      font-size: 30px;
+      width: 100%;
+    `;
     return (
       <div className={`mall ${this.props.activeNamingOp && 'mall--content-open'}`}>
         <Footprint
@@ -25,10 +33,13 @@ class MapComponent extends Component {
                       activeLevel={this.props.activeLevel}
                       key={l.id || 1010101}
                       level={l}
+                      onPreviewNamingOp={this.props.onPreviewNamingOp}
+                      onClearPreview={this.props.onClearPreview}
                     />
             }
           )}
         </div>
+        <Preview className="preview-title">{this.props.previewTitle}</Preview>
       </div>
     );
   }

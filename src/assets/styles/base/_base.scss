@@ -311,3 +311,9 @@ button:focus {
 	-webkit-transform: translateZ(-60vmin);
 	transform: translateZ(-60vmin);
 }
+
+.naming-op {
+    &::after {
+      content: attr(data-title);
+    }
+}

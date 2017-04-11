@@ -4,6 +4,8 @@ import {
   SELECT_NAMING_OP,
   CLOSE_NAMING_OP,
   UPDATE_NAMING_OPS,
+  PREVIEW_NAMING_OP,
+  CLEAR_PREVIEW,
   RESET_MAP
 } from './action-types';
 
@@ -43,5 +45,18 @@ export function closeNamingOp() {
 export function updateNamingOps() {
   return {
     type: UPDATE_NAMING_OPS
+  }
+}
+
+export function previewNamingOp(title) {
+  return {
+    type: PREVIEW_NAMING_OP,
+    title
+  }
+}
+
+export function clearPreview() {
+  return {
+    type: CLEAR_PREVIEW
   }
 }
