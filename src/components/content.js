@@ -7,7 +7,6 @@ class Content extends Component {
         <div className={`content__item ${this.props.activeNamingOp && 'content__item--current'}`}>
           <h3 className="content__item-title">
             {this.props.activeNamingOp && this.props.activeNamingOp.title}
-            {this.props.activeNamingOp && this.props.activeNamingOp.id}
           </h3>
           <div className="content__item-details">
             <img className="content_image" src={process.env.PUBLIC_URL + '/assets/images/photo1.jpg'} alt="" />

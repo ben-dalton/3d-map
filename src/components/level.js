@@ -52,7 +52,7 @@ class Level extends Component {
                   y={n.y}
                   width={n.width}
                   height={n.height}
-                  style={{ fill: 'none', stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}
+                  style={{ fill: this.props.level.color, stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}
                 />
               );
             } else if (n.svgElement === 'polygon') {
@@ -63,7 +63,7 @@ class Level extends Component {
                   onMouseLeave={() => this.props.onClearPreview()}
                   key={n.id}
                   points={n.points}
-                  style={{ fill: 'none', stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}
+                  style={{ fill: this.props.level.color, stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}
                 />
               );
             } else { return <div></div> }
