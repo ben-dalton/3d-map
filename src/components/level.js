@@ -25,6 +25,18 @@ class Level extends Component {
         cursor: normal;
       }
     `;
+    const RectOp = styled.rect`
+      fill: ${props => props.selected ? '#aaa' : props.fill};
+      stroke: ${props => props.stroke};
+      strokeWidth: 1;
+      strokeMiterlimit: 10;
+    `;
+    const PolyOp = styled.polygon`
+      fill: ${props => props.selected ? '#aaa' : props.fill};
+      stroke: ${props => props.stroke};
+      strokeWidth: 1;
+      strokeMiterlimit: 10;
+    `;
     return (
       <ReactCSSTransitionGroup
         transitionName="level"
@@ -43,7 +55,7 @@ class Level extends Component {
           {this.props.activeLevel && this.props.level.naming_ops && this.props.level.naming_ops.map(n => {
             if (n.svgElement === 'rect') {
               return (
-                <rect
+                <RectOp
                   onClick={() => this.props.onSelectNamingOp(n.id)}
                   onMouseEnter={() => this.props.onPreviewNamingOp(n.title)}
                   onMouseLeave={() => this.props.onClearPreview()}
@@ -52,18 +64,22 @@ class Level extends Component {
                   y={n.y}
                   width={n.width}
                   height={n.height}
-                  style={{ fill: this.props.level.color, stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}
+                  fill={this.props.level.color}
+                  stroke={n.color}
+                  selected={this.props.activeNamingOp && (n.id === this.props.activeNamingOp.id)}
                 />
               );
             } else if (n.svgElement === 'polygon') {
               return (
-                <polygon
+                <PolyOp
                   onClick={() => this.props.onSelectNamingOp(n.id)}
                   onMouseEnter={() => this.props.onPreviewNamingOp(n.title)}
                   onMouseLeave={() => this.props.onClearPreview()}
                   key={n.id}
                   points={n.points}
-                  style={{ fill: this.props.level.color, stroke: n.color, strokeWidth: 1, strokeMiterlimit: 10}}
+                  fill={this.props.level.color}
+                  stroke={n.color}
+                  selected={this.props.activeNamingOp && (n.id === this.props.activeNamingOp.id)}
                 />
               );
             } else { return <div></div> }

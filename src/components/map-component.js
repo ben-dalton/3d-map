@@ -31,6 +31,7 @@ class MapComponent extends Component {
                       onSelectLevel={this.props.onSelectLevel}
                       onSelectNamingOp={this.props.onSelectNamingOp}
                       activeLevel={this.props.activeLevel}
+                      activeNamingOp={this.props.activeNamingOp}
                       key={l.id || 1010101}
                       level={l}
                       onPreviewNamingOp={this.props.onPreviewNamingOp}
