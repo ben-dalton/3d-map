@@ -3,7 +3,8 @@ import undoable from 'redux-undo';
 import {
   SELECT_ZONE,
   SELECT_LEVEL,
-  SELECT_NAMING_OP,
+  MAP_SELECT_NAMING_OP,
+  LIST_SELECT_NAMING_OP,
   CLOSE_NAMING_OP,
   UPDATE_NAMING_OPS,
   PREVIEW_NAMING_OP,
@@ -27,14 +28,23 @@ const getSelectedNamingOp = (state, namingOpId) => {
             .filter(n => n.id === namingOpId)[0];
 };
 
+const getZoneFromId = (zoneId) => {
+  return zones.filter(z => zoneId === z.id)[0];
+};
+
+const getLevelFromIds = (zoneId, levelId) => {
+  const activeZone = getZoneFromId(zoneId);
+  return activeZone.levels.filter(l => l.id === levelId)[0];
+};
+
 const getSelectedLevel = (state, levelId) => {
   return state.activeZone.levels
               .filter(l => l.id === levelId)[0];
-}
+};
 
 const getSelectedZone = (zoneId) => {
   return zones.filter(z => z.id === zoneId)[0];
-}
+};
 
 const getAvailableNamingOps = (state) => {
   let available_zones = state.activeZone ? [state.activeZone] : zones;
@@ -42,21 +52,25 @@ const getAvailableNamingOps = (state) => {
     if(state.activeLevel) {
       return {
         zone_label: z.label,
+        zone_id: z.id,
         naming_ops: state.activeLevel.naming_ops.map(n => {
           return {
             ...n,
-            level_label: state.activeLevel.label
+            level_label: state.activeLevel.label,
+            level_id: state.activeLevel.id
           }
         })
       }
     } else {
       return {
         zone_label: z.label,
+        zone_id: z.id,
         naming_ops: [].concat.apply([], z.levels.map(l => {
           return l.naming_ops.map(n => {
             return {
               ...n,
-              level_label: l.label
+              level_label: l.label,
+              level_id: l.id
             };
           })
         }))
@@ -78,10 +92,17 @@ function mapApp(state = initialState, action) {
         ...state,
         activeLevel: getSelectedLevel(state, action.levelId)
       }
-    case SELECT_NAMING_OP:
+    case MAP_SELECT_NAMING_OP:
       return {
         ...state,
         activeNamingOp: getSelectedNamingOp(state, action.namingOpId)
+      }
+    case LIST_SELECT_NAMING_OP:
+      return {
+        ...state,
+        activeZone: state.activeZone || getZoneFromId(action.payload.zoneId),
+        activeLevel: state.activeLevel || getLevelFromIds(action.payload.zoneId, action.payload.levelId),
+        activeNamingOp: getSelectedNamingOp(state, action.payload.namingOpId)
       }
     case CLOSE_NAMING_OP:
       return {

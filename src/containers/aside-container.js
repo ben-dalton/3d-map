@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import {  selectZone,
           selectLevel,
-          selectNamingOp } from '../actions/map-actions';
+          listSelectNamingOp } from '../actions/map-actions';
 import AsideComponent from '../components/aside-component';
 
 const mapStateToProps = (state) => {
@@ -22,8 +22,8 @@ const mapDispatchToProps = (dispatch) => {
     onSelectLevel: levelId => {
       dispatch(selectLevel(levelId));
     },
-    onSelectNamingOp: namingOpId => {
-      dispatch(selectNamingOp(namingOpId));
+    onSelectNamingOp: (zoneId, levelId, namingOpId) => {
+      dispatch(listSelectNamingOp(zoneId, levelId, namingOpId));
     }
   }
 }

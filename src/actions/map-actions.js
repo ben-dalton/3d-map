@@ -1,7 +1,8 @@
 import {
   SELECT_ZONE,
   SELECT_LEVEL,
-  SELECT_NAMING_OP,
+  MAP_SELECT_NAMING_OP,
+  LIST_SELECT_NAMING_OP,
   CLOSE_NAMING_OP,
   UPDATE_NAMING_OPS,
   PREVIEW_NAMING_OP,
@@ -29,9 +30,20 @@ export function resetMap() {
   }
 }
 
-export function selectNamingOp(namingOpId) {
+export function listSelectNamingOp(zoneId, levelId, namingOpId) {
   return {
-    type: SELECT_NAMING_OP,
+    type: LIST_SELECT_NAMING_OP,
+    payload: {
+      zoneId,
+      levelId,
+      namingOpId
+    }
+  }
+}
+
+export function mapSelectNamingOp(namingOpId) {
+  return {
+    type: MAP_SELECT_NAMING_OP,
     namingOpId
   }
 }

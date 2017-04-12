@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 class AsideComponent extends Component {
   constructor(props) {
@@ -25,6 +26,11 @@ class AsideComponent extends Component {
   }
 
   render() {
+    const ListLink = styled.a`
+      &:hover {
+        cursor: pointer;
+      }
+    `;
     const zoneList = zone => {
       return (
         <li key={zone.zone_label} className="list__item">{zone.zone_label}
@@ -32,7 +38,7 @@ class AsideComponent extends Component {
             {zone.naming_ops.map(n => {
               return (
                 <li key={n.id} className="list__item">
-                  <a onClick={() => this.props.onSelectNamingOp(n.id)} className="list__link">{n.title}</a>
+                  <ListLink onClick={() => this.props.onSelectNamingOp(zone.zone_id, n.level_id, n.id)} className="list__link">{n.title}</ListLink>
                 </li>
               );
             })}
