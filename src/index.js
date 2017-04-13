@@ -10,7 +10,7 @@ import './assets/styles/App.css';
 import mapApp from './reducers/map-reducer';
 import App from './components/app';
 
-let store = createStore(
+export let store = createStore(
   mapApp,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

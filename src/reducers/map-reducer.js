@@ -9,6 +9,9 @@ import {
   UPDATE_NAMING_OPS,
   PREVIEW_NAMING_OP,
   CLEAR_PREVIEW,
+  CLEAR_NAMING_OP_SELECTION,
+  CLEAR_LEVEL_SELECTION,
+  CLEAR_ZONE_SELECTION,
   RESET_MAP
 } from '../actions/action-types';
 
@@ -123,6 +126,21 @@ function mapApp(state = initialState, action) {
       return {
         ...state,
         previewTitle: null
+      }
+    case CLEAR_NAMING_OP_SELECTION:
+      return {
+        ...state,
+        activeNamingOp: null
+      }
+    case CLEAR_LEVEL_SELECTION:
+      return {
+        ...state,
+        activeLevel: null
+      }
+    case CLEAR_ZONE_SELECTION:
+      return {
+        ...state,
+        activeZone: null
       }
     case RESET_MAP:
       return {

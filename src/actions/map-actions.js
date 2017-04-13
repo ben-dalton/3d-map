@@ -7,8 +7,12 @@ import {
   UPDATE_NAMING_OPS,
   PREVIEW_NAMING_OP,
   CLEAR_PREVIEW,
+  CLEAR_NAMING_OP_SELECTION,
+  CLEAR_LEVEL_SELECTION,
+  CLEAR_ZONE_SELECTION,
   RESET_MAP
 } from './action-types';
+import { store } from '../index';
 
 export function selectZone(zoneId) {
   return {
@@ -70,5 +74,24 @@ export function previewNamingOp(title) {
 export function clearPreview() {
   return {
     type: CLEAR_PREVIEW
+  }
+}
+
+export function clearSelection() {
+  const { activeZone, activeLevel, activeNamingOp } = store.getState().present;
+  if (activeNamingOp) {
+    return {
+      type: CLEAR_NAMING_OP_SELECTION,
+    }
+  }
+  if (activeLevel) {
+    return {
+      type: CLEAR_LEVEL_SELECTION
+    }
+  }
+  if (activeZone) {
+    return {
+      type: CLEAR_ZONE_SELECTION
+    }
   }
 }

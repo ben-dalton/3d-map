@@ -7,3 +7,6 @@ export const CLOSE_NAMING_OP = 'close_naming_op';
 export const UPDATE_NAMING_OPS = 'update_naming_ops';
 export const PREVIEW_NAMING_OP = 'preview_naming_op';
 export const CLEAR_PREVIEW = 'clear_preview';
+export const CLEAR_NAMING_OP_SELECTION = "clear_naming_op_selection";
+export const CLEAR_LEVEL_SELECTION = "clear_level_selection";
+export const CLEAR_ZONE_SELECTION = "clear_zone_selection";

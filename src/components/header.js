@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import BreadcrumbsContainer from '../containers/breadcrumbs-container.js';
 
 class Header extends Component {
   render() {
     const Title = styled.h1`
       font-size: 65px;
+      text-align: center;
     `;
     const Link = styled.a`
       cursor: pointer;
@@ -16,7 +18,8 @@ class Header extends Component {
             <img className="animated fadeInLeft " src="http://d81ldo19jx3e0.cloudfront.net/northwestern/img/wf-logo-sm.png" alt="" />
           </Link>
         </div>
-        <Title className="text-center">Facility Map</Title>
+        <Title>Facility Map</Title>
+        <BreadcrumbsContainer />
       </div>
     );
   }
