@@ -42,7 +42,8 @@ export const zones = [
             "width": 11.8,
             "height": 15.2,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 400000
           },
           {
             "id": 2,
@@ -54,7 +55,8 @@ export const zones = [
             "width": 8.3,
             "height": 15.2,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 250000
           },
           {
             "id": 3,
@@ -66,7 +68,8 @@ export const zones = [
             "width": 8.3,
             "height": 15.2,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 300000
           },
           {
             "id": 4,
@@ -78,7 +81,8 @@ export const zones = [
             "width": 8.3,
             "height": 10.1,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 600000
           },
           {
             "id": 5,
@@ -90,7 +94,8 @@ export const zones = [
             "width": 8.3,
             "height": 10.1,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 100000
           },
           {
             "id": 6,
@@ -102,7 +107,8 @@ export const zones = [
             "width": 8.3,
             "height": 10.1,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 100000
           },
           {
             "id": 7,
@@ -114,7 +120,8 @@ export const zones = [
             "width": 8.3,
             "height": 10.1,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 250000
           },
           {
             "id": 8,
@@ -126,7 +133,8 @@ export const zones = [
             "width": 8.3,
             "height": 10.1,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 300000
           },
           {
             "id": 9,
@@ -138,7 +146,8 @@ export const zones = [
             "width": 8.3,
             "height": 10.1,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 100000
           },
           {
             "id": 10,
@@ -150,7 +159,8 @@ export const zones = [
             "width": 8.3,
             "height": 15.2,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 600000
           },
           {
             "id": 11,
@@ -162,7 +172,8 @@ export const zones = [
             "width": 8.3,
             "height": 10.1,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 100000
           },
           {
             "id": 12,
@@ -174,7 +185,8 @@ export const zones = [
             "width": 8.3,
             "height": 9.8,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 250000
           },
           {
             "id": 13,
@@ -186,7 +198,8 @@ export const zones = [
             "width": 8.3,
             "height": 5.2,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 300000
           },
           {
             "id": 14,
@@ -198,7 +211,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "47.5,260 30.7,260 30.8,249.6 27.6,249.6 27.6,244.8 47.5,244.8"
+            "points": "47.5,260 30.7,260 30.8,249.6 27.6,249.6 27.6,244.8 47.5,244.8",
+            "value": 100000
           },
           {
             "id": 15,
@@ -210,7 +224,8 @@ export const zones = [
             "width": 8.3,
             "height": 4.5,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 250000
           },
           {
             "id": 16,
@@ -222,7 +237,8 @@ export const zones = [
             "width": 8.3,
             "height": 15.2,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 100000
           },
           {
             "id": 17,
@@ -234,7 +250,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "47.5,260 64.2,260 64.1,249.6 72.9,249.6 72.9,244.8 47.5,244.8"
+            "points": "47.5,260 64.2,260 64.1,249.6 72.9,249.6 72.9,244.8 47.5,244.8",
+            "value": 600000
           },
           {
             "id": 18,
@@ -246,7 +263,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "73,260 89.7,260 89.6,249.6 98.4,249.6 98.4,244.8 73,244.8"
+            "points": "73,260 89.7,260 89.6,249.6 98.4,249.6 98.4,244.8 73,244.8",
+            "value": 300000
           },
           {
             "id": 19,
@@ -258,7 +276,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "98.3,259.6 115,259.6 114.9,245.3 123.7,245.3 123.7,238.7 98.3,238.7"
+            "points": "98.3,259.6 115,259.6 114.9,245.3 123.7,245.3 123.7,238.7 98.3,238.7",
+            "value": 100000
           },
           {
             "id": 20,
@@ -270,7 +289,8 @@ export const zones = [
             "width": 8.3,
             "height": 4.5,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 100000
           },
           {
             "id": 21,
@@ -282,7 +302,8 @@ export const zones = [
             "width": 20.1,
             "height": 16.9,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 250000
           },
           {
             "id": 22,
@@ -294,7 +315,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "14.1,238 14.1,226.1 46.4,226.1 46.4,232 57.2,232 57.2,229.5 91.8,229.5 91.8,238.4 97.8,238.4 97.8,244.9 27.6,244.9 27.6,250.4 21.7,250.4 21.7,237.9"
+            "points": "14.1,238 14.1,226.1 46.4,226.1 46.4,232 57.2,232 57.2,229.5 91.8,229.5 91.8,238.4 97.8,238.4 97.8,244.9 27.6,244.9 27.6,250.4 21.7,250.4 21.7,237.9",
+            "value": 100000
           },
           {
             "id": 23,
@@ -306,7 +328,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "43.8,226.1 43.8,209.9 57.2,209.9 57.2,232.2 46.5,232.2 46.5,226.2"
+            "points": "43.8,226.1 43.8,209.9 57.2,209.9 57.2,232.2 46.5,232.2 46.5,226.2",
+            "value": 300000
           },
           {
             "id": 24,
@@ -318,7 +341,8 @@ export const zones = [
             "width": 13.2,
             "height": 23.5,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 250000
           },
           {
             "id": 25,
@@ -330,7 +354,8 @@ export const zones = [
             "width": 14.5,
             "height": 18.1,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 600000
           },
           {
             "id": 26,
@@ -342,7 +367,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "124.5,246.9 136.2,247 136.2,241.8 151.1,241.8 151.1,229.2 124.5,229.2"
+            "points": "124.5,246.9 136.2,247 136.2,241.8 151.1,241.8 151.1,229.2 124.5,229.2",
+            "value": 100000
           },
           {
             "id": 27,
@@ -354,7 +380,8 @@ export const zones = [
             "width": 7.4,
             "height": 9,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 250000
           },
           {
             "id": 28,
@@ -366,7 +393,8 @@ export const zones = [
             "width": 14.7,
             "height": 10.4,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 100000
           },
           {
             "id": 29,
@@ -378,7 +406,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "142.6,229.5 101.6,229.5 101.6,208.2 125.2,208.2 125.2,211.3 142.6,211.3"
+            "points": "142.6,229.5 101.6,229.5 101.6,208.2 125.2,208.2 125.2,211.3 142.6,211.3",
+            "value": 300000
           },
           {
             "id": 30,
@@ -390,7 +419,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "125.3,188.3 151.1,188.3 151.1,229.2 142.6,229.2 142.6,211.3 125.2,211.3"
+            "points": "125.3,188.3 151.1,188.3 151.1,229.2 142.6,229.2 142.6,211.3 125.2,211.3",
+            "value": 100000
           },
           {
             "id": 31,
@@ -402,7 +432,8 @@ export const zones = [
             "width": 12.1,
             "height": 9.3,
             "color": "#666666",
-            "points": ""
+            "points": "",
+            "value": 100000
           },
           {
             "id": 32,
@@ -414,7 +445,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "122.7,154.1 132.6,149 134.5,152.8 134.5,169.2 122.5,169.2"
+            "points": "122.7,154.1 132.6,149 134.5,152.8 134.5,169.2 122.5,169.2",
+            "value": 100000
           },
           {
             "id": 33,
@@ -426,7 +458,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "134.5,142.3 147.8,135.4 151.6,143.1 138.2,149.8"
+            "points": "134.5,142.3 147.8,135.4 151.6,143.1 138.2,149.8",
+            "value": 250000
           },
           {
             "id": 34,
@@ -438,7 +471,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "131.1,134.5 144.3,127.7 148.1,135.3 134.8,142"
+            "points": "131.1,134.5 144.3,127.7 148.1,135.3 134.8,142",
+            "value": 300000
           },
           {
             "id": 35,
@@ -450,7 +484,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "127.3,126.9 140.5,120.1 144.3,127.7 131,134.4"
+            "points": "127.3,126.9 140.5,120.1 144.3,127.7 131,134.4",
+            "value": 100000
           },
           {
             "id": 36,
@@ -462,7 +497,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "123.2,119.3 136.4,112.4 140.3,120.1 126.9,126.8"
+            "points": "123.2,119.3 136.4,112.4 140.3,120.1 126.9,126.8",
+            "value": 600000
           },
           {
             "id": 37,
@@ -474,7 +510,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "119.4,112.2 132.6,105.3 136.4,113 123.1,119.7"
+            "points": "119.4,112.2 132.6,105.3 136.4,113 123.1,119.7",
+            "value": 100000
           },
           {
             "id": 38,
@@ -486,7 +523,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "115.6,104.6 128.8,97.7 132.6,105.3 119.3,112.1"
+            "points": "115.6,104.6 128.8,97.7 132.6,105.3 119.3,112.1",
+            "value": 300000
           },
           {
             "id": 39,
@@ -498,7 +536,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "104.3,71.9 113.1,67.4 116.9,75 108,79.4"
+            "points": "104.3,71.9 113.1,67.4 116.9,75 108,79.4",
+            "value": 250000
           },
           {
             "id": 40,
@@ -510,7 +549,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "100.5,64.4 109.3,59.9 113.1,67.6 104.2,71.9"
+            "points": "100.5,64.4 109.3,59.9 113.1,67.6 104.2,71.9",
+            "value": 100000
           },
           {
             "id": 41,
@@ -522,7 +562,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "96.7,57 105.5,52.5 109.3,60.1 100.4,64.5"
+            "points": "96.7,57 105.5,52.5 109.3,60.1 100.4,64.5",
+            "value": 100000
           },
           {
             "id": 42,
@@ -534,7 +575,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "88.2,51.5 101.8,44.7 105.6,52.3 91.9,59"
+            "points": "88.2,51.5 101.8,44.7 105.6,52.3 91.9,59",
+            "value": 300000
           },
           {
             "id": 43,
@@ -546,7 +588,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "111.7,97.1 124.9,90.2 128.7,97.8 115.4,104.6"
+            "points": "111.7,97.1 124.9,90.2 128.7,97.8 115.4,104.6",
+            "value": 600000
           },
           {
             "id": 44,
@@ -558,7 +601,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "92.1,59.3 105.3,52.5 124.6,90.5 111.3,97.2"
+            "points": "92.1,59.3 105.3,52.5 124.6,90.5 111.3,97.2",
+            "value": 250000
           },
           {
             "id": 45,
@@ -570,7 +614,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "121.6,148 118.2,141 126.3,137.1 130,143.9"
+            "points": "121.6,148 118.2,141 126.3,137.1 130,143.9",
+            "value": 100000
           },
           {
             "id": 46,
@@ -582,7 +627,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "118,141.1 114.3,133.4 122.4,129.4 126.4,137.1"
+            "points": "118,141.1 114.3,133.4 122.4,129.4 126.4,137.1",
+            "value": 100000
           },
           {
             "id": 47,
@@ -594,7 +640,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "114.2,133.5 106.7,118.5 115.1,114.4 122.5,129.4"
+            "points": "114.2,133.5 106.7,118.5 115.1,114.4 122.5,129.4",
+            "value": 300000
           },
           {
             "id": 48,
@@ -606,7 +653,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "106.6,118.6 97.7,101 106.1,96.9 115,114.5"
+            "points": "106.6,118.6 97.7,101 106.1,96.9 115,114.5",
+            "value": 100000
           },
           {
             "id": 49,
@@ -618,7 +666,8 @@ export const zones = [
             "width": null,
             "height": null,
             "color": "#666666",
-            "points": "76.6,28.5 93.5,28.5 101.6,45.1 88.2,51.5"
+            "points": "76.6,28.5 93.5,28.5 101.6,45.1 88.2,51.5",
+            "value": 100000
           }
         ]
       }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { formatMoney } from 'accounting';
 
 class AsideComponent extends Component {
   constructor(props) {
@@ -27,9 +28,16 @@ class AsideComponent extends Component {
 
   render() {
     const ListLink = styled.a`
+      margin-bottom: 5px;
       &:hover {
         cursor: pointer;
       }
+    `;
+    const Title = styled.div`
+      float: left
+    `;
+    const Value = styled.div`
+      float: right
     `;
     const zoneList = zone => {
       return (
@@ -38,7 +46,10 @@ class AsideComponent extends Component {
             {zone.naming_ops.map(n => {
               return (
                 <li key={n.id} className="list__item">
-                  <ListLink onClick={() => this.props.onSelectNamingOp(zone.zone_id, n.level_id, n.id)} className="list__link">{n.title}</ListLink>
+                  <ListLink onClick={() => this.props.onSelectNamingOp(zone.zone_id, n.level_id, n.id)} className="list__link">
+                    <Title>{n.title}</Title>
+                    <Value>{formatMoney(n.value, {precision: 0})}</Value>
+                  </ListLink>
                 </li>
               );
             })}
