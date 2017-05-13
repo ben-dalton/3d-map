@@ -678,8 +678,8 @@ button:focus {
   color: #515158; }
 
 .level--current::after {
-  -webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin);
-  transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin); }
+  -webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(22vmin) translateX(5vmin) translateY(-10vmin);
+  transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(22vmin) translateX(5vmin) translateY(-10vmin); }
 
 .level--1::after {
   content: 'L1'; }
@@ -759,9 +759,9 @@ button:focus {
 
 /* Current level */
 .level.level--current {
-  -webkit-transform: translateZ(15vmin) rotate3d(-1, -1, 1, 20deg);
+  -webkit-transform: translateZ(22vmin) rotate3d(-1, -1, 1, 20deg);
   /* go to center */
-  transform: translateZ(15vmin) rotate3d(-1, -1, 1, 20deg); }
+  transform: translateZ(22vmin) rotate3d(-1, -1, 1, 20deg); }
 
 .level > Svg polygon:not(:first-child), .level > Svg rect {
   opacity: 0;
